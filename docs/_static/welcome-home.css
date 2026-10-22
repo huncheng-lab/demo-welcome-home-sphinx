@@ -254,3 +254,102 @@ pre {
   div.admonition.warning { padding: 0.75rem 0.9rem; }
   div.admonition.warning .admonition-title { margin: -0.75rem -0.9rem 0.5rem; padding: 0.4rem 0.9rem; }
 }
+
+/* ============================================================
+   首页（index）——档案站沉浸式布局
+   ============================================================ */
+
+/* 首页隐藏左右侧边栏，内容全宽 */
+body:not([data-mode="auto"]) .bd-sidebar-primary,
+.bd-sidebar-secondary { display: none; }
+
+.bd-content { margin-left: 0 !important; max-width: 100% !important; }
+.bd-content__container { max-width: 100% !important; padding: 0 2rem; }
+
+/* 首页标题区：居中、大字号、serif */
+.bd-content h1:first-of-type {
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6a6258;
+  border: none;
+  margin-top: 2rem;
+}
+
+.bd-content h2:first-of-type {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem 0 0.5rem;
+  border: none;
+}
+
+.bd-content h2:first-of-type + p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6a6258;
+  letter-spacing: 0.15em;
+}
+
+/* 元数据表格：去掉边框，变成卡片行 */
+.bd-content table:first-of-type {
+  margin: 3rem auto;
+  border: none;
+  max-width: 900px;
+}
+.bd-content table:first-of-type thead { display: none; }
+.bd-content table:first-of-type tbody tr {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.bd-content table:first-of-type tbody td {
+  text-align: center;
+  border: none;
+  background: transparent;
+  padding: 1rem 0.5rem;
+}
+.bd-content table:first-of-type tbody td:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #9d6311;
+  display: block;
+}
+
+/* 全站导航链接区 */
+.bd-content .toctree-wrapper + p,
+.bd-content h2 + ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+.bd-content .toctree-wrapper + p a,
+.bd-content h2 + ul a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #d3cbbc;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.bd-content .toctree-wrapper + p a:hover,
+.bd-content h2 + ul a:hover {
+  background: #e9decb;
+  border-color: #9d6311;
+}
+
+/* 剧照图片：宽银幕比例 2.39:1 */
+.bd-content img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 角色档案页：编号大字 */
+.bd-content h1 {
+  font-size: 2.5rem;
+}
+.bd-content h2 {
+  margin-top: 2.5rem;
+}
