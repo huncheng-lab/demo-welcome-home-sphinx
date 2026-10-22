@@ -14,6 +14,7 @@ title: 《欢迎回家》档案站
 :caption: 全站导航
 :maxdepth: 2
 
+original
 cast/index
 keyart
 relations
