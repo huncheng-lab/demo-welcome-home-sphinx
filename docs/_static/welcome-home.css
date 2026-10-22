@@ -256,89 +256,138 @@ pre {
 }
 
 /* ============================================================
-   首页（index）——档案站沉浸式布局
+   首页（index）——档案站沉浸式布局（复刻 React Hero 组件）
    ============================================================ */
 
-/* 首页隐藏左右侧边栏，内容全宽 */
-body:not([data-mode="auto"]) .bd-sidebar-primary,
-.bd-sidebar-secondary { display: none; }
-
+/* 全站隐藏侧边栏，内容全宽 */
+.bd-sidebar-primary, .bd-sidebar-secondary { display: none !important; }
 .bd-content { margin-left: 0 !important; max-width: 100% !important; }
-.bd-content__container { max-width: 100% !important; padding: 0 2rem; }
+.bd-content__container { max-width: 100% !important; padding: 0 !important; }
 
-/* 首页标题区：居中、大字号、serif */
-.bd-content h1:first-of-type {
-  font-size: 0.9rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: #6a6258;
-  border: none;
-  margin-top: 2rem;
+/* 首页主内容容器 */
+.bd-content .container,
+.bd-content .bd-content__inner {
+  max-width: 100% !important;
+  padding: 0 !important;
 }
 
-.bd-content h2:first-of-type {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin: 2rem 0 0.5rem;
-  border: none;
-}
-
-.bd-content h2:first-of-type + p {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #6a6258;
-  letter-spacing: 0.15em;
-}
-
-/* 元数据表格：去掉边框，变成卡片行 */
-.bd-content table:first-of-type {
-  margin: 3rem auto;
-  border: none;
-  max-width: 900px;
-}
-.bd-content table:first-of-type thead { display: none; }
-.bd-content table:first-of-type tbody tr {
+/* Hero 区：全屏高度 */
+.bd-content > section,
+.bd-content .section {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 3rem 0;
+  position: relative;
+  border-bottom: 1px solid #d3cbbc;
+}
+
+/* ψ 背景水印 */
+.bd-content h1::before {
+  content: "ψ";
+  position: absolute;
+  right: -5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--pst-font-family-heading);
+  font-size: 34vw;
+  line-height: 1;
+  color: rgba(43, 37, 31, 0.035);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 顶部场记条（第一个段落） */
+.bd-content p:first-of-type {
+  font-family: var(--pst-font-family-monospace);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #6a6258;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
+  position: relative;
+  z-index: 1;
 }
-.bd-content table:first-of-type tbody td {
-  text-align: center;
+
+/* 主标题 */
+.bd-content h1 {
+  font-family: var(--pst-font-family-heading);
+  font-size: clamp(4rem, 13vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.06em;
+  margin: 3rem 0 0;
   border: none;
+  position: relative;
+  z-index: 1;
+}
+
+/* 标题下的引用块（描述文字） */
+.bd-content blockquote {
+  border: none;
+  border-left: 1px solid rgba(157, 99, 17, 0.4);
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-family: var(--pst-font-family-heading);
+  font-size: 1.1rem;
+  color: rgba(43, 37, 31, 0.75);
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+/* 元数据表格：5列 grid */
+.bd-content table {
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid #d3cbbc;
+  border-left: 1px solid #d3cbbc;
+  border-collapse: separate;
+  border-spacing: 0;
+  position: relative;
+  z-index: 1;
+}
+.bd-content table thead { display: none; }
+.bd-content table tbody {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.bd-content table tr {
+  display: contents;
+}
+.bd-content table td {
+  border-right: 1px solid #d3cbbc;
+  border-bottom: none;
   background: transparent;
-  padding: 1rem 0.5rem;
+  padding: 1.5rem 1rem;
+  font-family: var(--pst-font-family-heading);
+  font-size: 0.95rem;
 }
-.bd-content table:first-of-type tbody td:first-child {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #9d6311;
+.bd-content table td:first-child {
+  font-family: var(--pst-font-family-monospace);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: #6a6258;
   display: block;
+  margin-bottom: 0.5rem;
 }
 
-/* 全站导航链接区 */
-.bd-content .toctree-wrapper + p,
-.bd-content h2 + ul {
-  text-align: center;
-  list-style: none;
-  padding: 0;
-}
-.bd-content .toctree-wrapper + p a,
-.bd-content h2 + ul a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #d3cbbc;
-  border-radius: 2px;
-  text-decoration: none;
-}
-.bd-content .toctree-wrapper + p a:hover,
-.bd-content h2 + ul a:hover {
-  background: #e9decb;
-  border-color: #9d6311;
+/* 导航链接区 */
+.bd-content .toctree-wrapper,
+.bd-content h2 {
+  display: none;
 }
 
-/* 剧照图片：宽银幕比例 2.39:1 */
+.bd-content > p:last-of-type,
+.bd-content > ul:last-of-type {
+  max-width: 800px;
+  margin: 4rem auto;
+}
+
+/* 剧照图片：宽银幕比例 */
 .bd-content img {
   display: block;
   margin: 2rem auto;
@@ -346,7 +395,7 @@ body:not([data-mode="auto"]) .bd-sidebar-primary,
   height: auto;
 }
 
-/* 角色档案页：编号大字 */
+/* 角色档案页样式 */
 .bd-content h1 {
   font-size: 2.5rem;
 }
