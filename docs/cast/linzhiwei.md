@@ -1,106 +1,84 @@
----
-title: "02 · 林知微 · LIN ZHIWEI"
----
+# 02 · 林知微
 
-<nav class="cast-rail">
-  <a href="shenyan.html"><span class="dot dot-amber"></span>← 上一位：沈砚</a>
-  <a href="laozhou.html"><span class="dot dot-ember"></span>下一位：老周 →</a>
-</nav>
+> **带着封存令来烧掉一切的人，其实是来把自己交出去的。**
 
-<section class="section-character">
+![林知微 定妆照](../assets/stills/linzhiwei.png)
 
-<header class="char-header">
-  <div class="char-header-left">
-    <span class="char-no accent-ice">DOSSIER<br>02</span>
-    <span class="char-divider"></span>
-    <div>
-      <h2 class="char-name">林知微</h2>
-      <p class="char-latin">LIN ZHIWEI</p>
-    </div>
-  </div>
-  <p class="char-role">带着封存令来烧掉一切的人，其实是来把自己交出去的。</p>
-</header>
+*文献库正门台阶 · 玻璃门前 · 晨 09:05*
 
-<figure class="still-plate">
-  <div class="matte-frame">
-    <div class="matte-frame-inner frame-anamorphic">
-      <img src="../assets/stills/linzhiwei.png" alt="林知微定妆">
-      <div class="plate-label">PLATE 02 · 2.39:1</div>
-      <div class="plate-caption">文献库正门台阶 · 玻璃门前 · 晨 09:05</div>
-    </div>
-  </div>
-  <figcaption><span class="accent-ice">LIGHT</span> 清晨强日光正面入射为主光，高调曝光；天光与白石阶反弹把面部暗部全部提亮，仅留极浅软阴影，冷蓝与暖白交融、无压黑。</figcaption>
-</figure>
+**灯光说明**：清晨强日光正面入射为主光，高调曝光；天光与白石阶反弹把面部暗部全部提亮，仅留极浅软阴影，冷蓝与暖白交融、无压黑。2.39:1，35mm 胶片颗粒。
 
-<div class="char-grid">
+<p><strong style='color:#316b87'>强调色 · ice</strong></p>
 
-<div>
-<div class="bio-block">
-  <div class="section-label"><span>02.1</span><span class="line"></span><h3>档案</h3></div>
-  <dl class="fact-list">
-    <div><dt>AGE / 年龄</dt><dd>44 岁（Ω-64 那年 22 岁）</dd></div>
-    <div><dt>OCCUPATION / 职业</dt><dd>意识科学伦理委员会执行主任；十九年前为理论物理研究所助理研究员</dd></div>
-    <div><dt>FORM / 存在形态</dt><dd>现实中的活人。另有 22 岁形态出现于闪回（场景 10、18），需另选演员，不复用主演化妆做旧。</dd></div>
-  </dl>
-</div>
+## 档案速览
 
-<div class="bio-block">
-  <div class="section-label"><span>02.2</span><span class="line"></span><h3>外形细节</h3></div>
-  <p class="sub-note">化妆 / 服装 / 道具组执行依据</p>
-  <ol class="numbered-list">
-    <li><span class="accent-ice">01</span> 齐耳短发，发尾是自己剪的，不规则；不染不烫。</li>
-    <li><span class="accent-ice">02</span> 完全不化妆，脸色偏白，眼下有明显青黑；颧骨清晰，下颌线绷紧。</li>
-    <li><span class="accent-ice">03</span> 黑色长风衣，扣到最上一颗，腰带系得很紧——像把自己捆住。</li>
-    <li><span class="accent-ice">04</span> 无任何首饰、无表、无戒指。全身上下只有一件私人物品：那支录音笔。</li>
-    <li><span class="accent-ice">05</span> 右手始终握一支银色录音笔，漆磨掉一大块露出底下的铝；握笔时指节发白。</li>
-    <li><span class="accent-ice">06</span> 黑色平底皮鞋（不是高跟）——她需要能在地下一层跑，也需要能安静地站在楼外。</li>
-  </ol>
-</div>
+| 项目 | 内容 |
+| --- | --- |
+| 年龄 | 44 岁（Ω-64 那年 22 岁） |
+| 身份 | 意识科学伦理委员会执行主任；十九年前为理论物理研究所助理研究员 |
+| 口头禅 | 「是或者不是。」 |
 
-<div class="bio-block">
-  <div class="section-label"><span>02.3</span><span class="line"></span><h3>性格内核</h3></div>
-  <p class="core-quote border-ice">锋利、克制、公事公办。她把罪感伪装成程序正义，用「封存令」「执行时间」「编号 2026-114」这些词把自己挡在情绪外面。说话像下刀，但每次下刀前会停顿半秒——那半秒就是她仅剩的良心。她是全剧唯一会提高音量的人，但每次提高音量之后立刻后悔。</p>
-</div>
-</div>
+## 存在形态
 
-<div>
-<div class="bio-block">
-  <div class="section-label"><span>02.4</span><span class="line"></span><h3>口头禅与标志性动作</h3></div>
-  <blockquote class="catchphrase accent-ice">「是或者不是。」</blockquote>
-  <ul class="dash-list">
-    <li>按下录音键，但从不回放。二十卷，十九年，一次都没听过。</li>
-    <li>跺脚震亮声控灯。十九年，每晚，她以为没人看见。</li>
-    <li>说话前先把文件、录音笔、茶杯摆整齐，摆得比需要的更齐。</li>
-    <li>提高音量之后立刻闭嘴，右手无意识地把录音笔攥得更紧。</li>
-  </ul>
-</div>
+- 现实中的活人。另有 22 岁形态出现于闪回（场景 10、18），需另选演员，不复用主演化妆做旧。
 
-<div class="bio-block">
-  <div class="section-label"><span>02.5</span><span class="line"></span><h3>核心秘密</h3></div>
-  <div class="secret-box">
-    <p class="secret-label">CLASSIFIED · 剧透预警</p>
-    <p>Ω-64 受试者知情同意书上「监护人：沈砚」三个字是她冒签的。她 22 岁，怕得要死，但她签了——因为「如果签你自己的名字，伦理委员会不会批」。第一卷录音里，她对着录音笔连说了三遍「里面没有人」。</p>
-  </div>
-</div>
+## 外形细节
 
-<div class="bio-block">
-  <div class="section-label"><span>02.6</span><span class="line"></span><h3>人物弧线</h3></div>
-  <ol class="arc-list">
-    <li><span class="arc-dot accent-ice"></span><div><strong>我是来烧掉的</strong><span>00:00 – 20:30</span></div></li>
-    <li><span class="arc-dot accent-ice"></span><div><strong>我认出了那个声音</strong><span>08:00（场景 08）</span></div></li>
-    <li><span class="arc-dot accent-ice"></span><div><strong>今晚我签我自己的</strong><span>32:00 – 41:00</span></div></li>
-    <li><span class="arc-dot accent-ice"></span><div><strong>我十九年没让这段回声停，也没让它响——那不叫活着，那叫冻着</strong><span>41:00</span></div></li>
-  </ol>
-</div>
+- 齐耳短发，发尾是自己剪的，不规则；不染不烫。
+- 完全不化妆，脸色偏白，眼下有明显青黑；颧骨清晰，下颌线绷紧。
+- 黑色长风衣，扣到最上一颗，腰带系得很紧——像把自己捆住。
+- 无任何首饰、无表、无戒指。全身上下只有一件私人物品：那支录音笔。
+- 右手始终握一支银色录音笔，漆磨掉一大块露出底下的铝；握笔时指节发白。
+- 黑色平底皮鞋（不是高跟）——她需要能在地下一层跑，也需要能安静地站在楼外。
 
-<div class="bio-block">
-  <div class="section-label"><span>02.7</span><span class="line"></span><h3>表演基调</h3></div>
-  <div class="direction-box">
-    <p class="direction-label">DIRECTION · 给演员与导演</p>
-    <p>崩溃必须分三次，且一次比一次安静：场景 14（捂嘴、肩膀抖、不出声）→ 场景 19（吼出来，全剧最大音量）→ 场景 28（完全平静，平静得像另一个人）。禁止一次性爆发。她哭的时候从不擦眼泪，让眼泪自己干。全剧她第一次被暖光完整照亮是场景 28 的烛光——前 27 场她一直在冷光或半暗部。</p>
-  </div>
-</div>
-</div>
+## 性格内核
 
-</div>
-</section>
+锋利、克制、公事公办。她把罪感伪装成程序正义，用「封存令」「执行时间」「编号 2026-114」这些词把自己挡在情绪外面。说话像下刀，但每次下刀前会停顿半秒——那半秒就是她仅剩的良心。她是全剧唯一会提高音量的人，但每次提高音量之后立刻后悔。
+
+## 标志性动作
+
+- 按下录音键，但从不回放。二十卷，十九年，一次都没听过。
+- 跺脚震亮声控灯。十九年，每晚，她以为没人看见。
+- 说话前先把文件、录音笔、茶杯摆整齐，摆得比需要的更齐。
+- 提高音量之后立刻闭嘴，右手无意识地把录音笔攥得更紧。
+
+## 核心秘密
+
+```{warning}
+Ω-64 受试者知情同意书上「监护人：沈砚」三个字是她冒签的。她 22 岁，怕得要死，但她签了——因为「如果签你自己的名字，伦理委员会不会批」。第一卷录音里，她对着录音笔连说了三遍「里面没有人」。
+```
+
+## 人物弧线
+
+| 阶段 | 时间轴区间 |
+| --- | --- |
+| 我是来烧掉的 | 00:00 – 20:30 |
+| 我认出了那个声音 | 08:00（场景 08） |
+| 今晚我签我自己的 | 32:00 – 41:00 |
+| 我十九年没让这段回声停，也没让它响——那不叫活着，那叫冻着 | 41:00 |
+
+## 表演基调
+
+崩溃必须分三次，且一次比一次安静：场景 14（捂嘴、肩膀抖、不出声）→ 场景 19（吼出来，全剧最大音量）→ 场景 28（完全平静，平静得像另一个人）。禁止一次性爆发。她哭的时候从不擦眼泪，让眼泪自己干。全剧她第一次被暖光完整照亮是场景 28 的烛光——前 27 场她一直在冷光或半暗部。
+
+## 关系网
+
+- **沈砚**｜她冒了他的名 · 十九年不敢见他：她签了「沈砚」三个字，从此既不敢见他，也不敢离开这栋楼。她今晚来烧手稿，其实是来烧自己。
+- **沈西 / 西西**｜送她进舱的人 · 唯一赦免她的人：西西没有原谅她，也没有指责她——只是说「她跺脚把声控灯震亮，她以为没人看见。我看见了。」这比原谅更重。
+- **老周**｜他给她倒了杯水，告诉她「你也是回声」：老周是唯一看见她十九年跺脚的人。他不安慰她，他只说：你应的那一声，也是你自己喊的。
+- **陈合**｜前雇主体系 · 今晚的被告：他停她的职，她发那封邮件。她是这个体系培养出来的人，也是唯一愿意把自己交出去的人。
+
+## 关键场次
+
+| 场景 | 剧中时钟 | 事件 | 强度 |
+| --- | --- | --- | --- |
+| 03 | 22:55 | 下车，声控灯灭，她跺脚震亮——全剧第一个动作就是「让光留下」 | ★★ |
+| 05 | 23:10 | 念出封存令；说出「你女儿」，沈砚的铅笔断了，她意识到自己说错了什么 | ★★★ |
+| 08 | 23:47 | 透过通风窗栅栏听见沈砚叫「西西」，滑坐在地——她认出了那个声音 | ★★★★ |
+| 09 | 00:03 | 被沈砚指认冒签，第一次说出「我二十二岁」；按灭了录音笔的红灯 | ★★★★ |
+| 12 | 00:20 | 在黑板上问出全剧核心问题：「谁在看第一个 ψ？」 | ★★★ |
+| 14 | 00:44 | 听老周转述「爷爷，你帮我看着爸爸」，小圆镜掉在桌上——第一次崩溃（无声） | ★★★★★ |
+| 19 | 01:41 | 吼出「那台设备是你造的」——全剧最大音量，也是她最残忍的一次自卫 | ★★★★★ |
+| 27 | 03:19 | 被西西当众说出「她以为没人看见。我看见了」，捂住嘴 | ★★★★ |
+| 28 | 03:33 | 播放第一卷录音，发出那封邮件：「今晚我签我自己的」 | ★★★★★ |
+| 33 | 05:20 | 在门厅椅子上睡着，手里还攥着录音笔，红灯是灭的 | ★★ |

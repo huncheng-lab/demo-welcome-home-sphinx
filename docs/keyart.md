@@ -1,17 +1,15 @@
----
-title: "群像定妆 · KEY ART"
----
+# 群像定妆 Key Art
 
-<section class="section-keyart">
-  <figure class="matte-frame">
-    <div class="matte-frame-inner frame-anamorphic">
-      <img src="assets/stills/keyart-group.png" alt="五人同框群像定妆">
-      <div class="keyart-label-top">KEY ART · ENSEMBLE</div>
-      <div class="keyart-label-right">2.39:1</div>
-    </div>
-  </figure>
-  <figcaption class="keyart-caption">
-    <p><span class="accent">LIGHT</span> 正午强日光自画左正面铺入 × 提亮砖墙与石板地反弹暖光吃净暗部 × 五人面部均匀受光提亮、仅存极浅软阴影</p>
-    <p>FORMAT 2.39:1 变形宽银幕 · 35mm 胶片颗粒 · 五人按戏剧关系站位（通透日光版）</p>
-  </figcaption>
-</section>
+![五人同框群像定妆](assets/stills/keyart-group.png)
+
+*城西文献库门前庭院 · 透光梧桐树荫 · 正午强日光*
+
+五人按戏剧关系站位：林知微、沈砚、西西、老周、陈合。
+
+**LIGHT**：正午强日光自画左正面铺入 × 提亮砖墙与石板地反弹暖光吃净暗部 × 五人面部均匀受光提亮、仅存极浅软阴影。
+
+**FORMAT**：2.39:1 变形宽银幕 · 35mm 胶片颗粒 · 五人按戏剧关系站位（通透日光版）。
+
+```{note}
+React 原站在此图上叠加了悬停联动标注层；Sphinx 静态版保留图片与文字说明，交互降级为阅读式呈现。
+```

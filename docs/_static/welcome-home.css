@@ -1,7 +1,7 @@
-/* 《欢迎回家》档案站 —— 复刻 React 原站视觉 */
+/* 《欢迎回家》档案站 —— 保留 pydata-sphinx-theme 布局，只美化内容 */
 
 /* ============================================================
-   基础变量
+   基础配色
    ============================================================ */
 :root {
   --bg: #f5f0e4;
@@ -11,7 +11,6 @@
   --secondary: #eee7d9;
   --muted: #ece5d9;
   --muted-fg: #6a6258;
-  --accent: #e9decb;
   --border: #d3cbbc;
   --destructive: #ac4923;
 
@@ -27,7 +26,7 @@
 }
 
 /* ============================================================
-   主题覆盖
+   主题变量覆盖
    ============================================================ */
 html {
   --pst-color-background: var(--bg);
@@ -42,7 +41,6 @@ html {
   --pst-font-family-base: var(--font-sans);
   --pst-font-family-heading: var(--font-serif);
   --pst-font-family-monospace: var(--font-mono);
-  --pst-header-height: 0px;
 }
 
 body {
@@ -54,688 +52,163 @@ body {
 
 ::selection { background-color: var(--primary); color: #fbf8f1; }
 
-/* 隐藏所有侧边栏 */
-.bd-sidebar-primary, .bd-sidebar-secondary, .bd-header .navbar-brand, .bd-header .navbar-nav { display: none !important; }
-.bd-content { margin-left: 0 !important; max-width: 100% !important; }
-.bd-content__container { max-width: 100% !important; padding: 0 !important; }
-.bd-header { display: none !important; }
-.bd-footer { display: none !important; }
-
 /* ============================================================
-   HERO 片头字幕卡
+   内容区域美化
    ============================================================ */
 
-.hero-topbar {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: var(--muted-fg);
-  padding: 2rem 3rem;
-  position: relative;
-  z-index: 2;
+.bd-article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.hero-psi-watermark {
-  position: absolute;
-  right: 5vw;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: var(--font-serif);
-  font-size: 34vw;
-  line-height: 1;
-  color: rgba(43, 37, 31, 0.035);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero-main {
-  padding: 4rem 3rem;
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-}
-
-.hero-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.3em;
-  color: rgba(157, 99, 17, 0.8);
-  margin: 0;
-}
-
-.hero-equation {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: rgba(43, 37, 31, 0.7);
-  margin: 1.5rem 0 0;
-}
-
-.hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(4rem, 13vw, 8.5rem);
-  font-weight: 400;
-  line-height: 0.92;
-  letter-spacing: 0.06em;
-  margin: 0.5rem 0 0;
-  border: none;
-}
-
-.hero-latin {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.34em;
-  color: var(--muted-fg);
-  margin-top: 1rem;
-}
-
-.hero-desc {
-  margin-top: 2rem;
-  padding-left: 1rem;
-  border-left: 1px solid rgba(157, 99, 17, 0.4);
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: rgba(43, 37, 31, 0.75);
-}
-
-.hero-meta {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  border-top: 1px solid var(--border);
-  border-left: 1px solid var(--border);
-  margin-top: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-meta > div {
-  border-right: 1px solid var(--border);
-  padding: 1.2rem 1rem;
-}
-
-.hero-meta dt {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  color: var(--muted-fg);
-}
-
-.hero-meta dd {
-  margin: 0.5rem 0 0;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  color: rgba(43, 37, 31, 0.9);
-}
-
-/* ============================================================
-   MATTE FRAME 装裱卡纸
-   ============================================================ */
-
-.matte-frame {
-  background: var(--card);
-  border: 1px solid var(--border);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 10px 30px -18px rgba(69,56,41,0.35);
-  padding: clamp(10px, 2vw, 22px);
-  margin: 2rem 3rem;
-}
-
-.matte-frame-inner {
-  border: 1px solid rgba(43, 37, 31, 0.22);
-  overflow: hidden;
-}
-
-.frame-anamorphic {
-  aspect-ratio: 2.39 / 1;
-  position: relative;
-}
-
-.frame-anamorphic img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-
-/* ============================================================
-   KEY ART
-   ============================================================ */
-
-.section-keyart {
-  border-bottom: 1px solid var(--border);
-}
-
-.keyart-label-top,
-.keyart-label-right {
-  position: absolute;
-  top: 1rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.24em;
-  color: rgba(255,255,255,0.9);
-}
-
-.keyart-label-top { left: 1.5rem; }
-.keyart-label-right { right: 1.5rem; }
-
-.keyart-caption {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem 3rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  line-height: 1.8;
-  letter-spacing: 0.08em;
-  color: var(--muted-fg);
-}
-
-.accent { color: var(--primary); }
-
-/* ============================================================
-   CAST RAIL 角色导航
-   ============================================================ */
-
-.cast-rail {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  display: flex;
-  align-items: stretch;
-  gap: 1px;
-  border-bottom: 1px solid var(--border);
-  background: rgba(245, 240, 228, 0.88);
-  backdrop-filter: blur(8px);
-  overflow-x: auto;
-  padding: 0 1rem;
-}
-
-.cast-rail a {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.9rem 1.2rem;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-
-.cast-rail a:hover { background: var(--accent); }
-
-.cast-rail .dot {
-  width: 6px;
-  height: 6px;
-  flex-shrink: 0;
-}
-
-.dot-amber { background: var(--amber); }
-.dot-ice { background: var(--ice); }
-.dot-ember { background: var(--ember); }
-.dot-psi { background: var(--psi); }
-.dot-steel { background: var(--steel); }
-
-.cast-rail a span:nth-child(2) {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.16em;
-  color: var(--muted-fg);
-}
-
-.cast-rail a span:nth-child(3) {
-  font-family: var(--font-serif);
-  font-size: 0.85rem;
-  letter-spacing: 0.14em;
-  color: rgba(43, 37, 31, 0.65);
-}
-
-.rail-right {
-  margin-left: auto;
-  font-family: var(--font-mono) !important;
-  font-size: 10px !important;
-  letter-spacing: 0.18em !important;
-  color: var(--muted-fg) !important;
-}
-
-/* ============================================================
-   CHARACTER SECTION 角色档案
-   ============================================================ */
-
-.section-character {
-  border-bottom: 1px solid var(--border);
-  padding: 4rem 3rem;
-}
-
-.char-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.char-header-left {
-  display: flex;
-  align-items: flex-end;
-  gap: 1.2rem;
-}
-
-.char-no {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 0.2em;
-}
-
-.char-divider {
-  width: 1px;
-  height: 2.5rem;
-  background: var(--border);
-}
-
-.char-name {
+.bd-article h1 {
   font-family: var(--font-serif);
   font-size: 2.5rem;
-  line-height: 1;
-  letter-spacing: 0.1em;
-  margin: 0;
-  border: none;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.char-latin {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.34em;
-  color: var(--muted-fg);
-  margin: 0.75rem 0 0;
-}
-
-.char-role {
-  max-width: 28rem;
+.bd-article h2 {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: rgba(43, 37, 31, 0.7);
-  text-align: right;
-  margin: 0;
-}
-
-/* 角色强调色 */
-.accent-amber { color: var(--amber); }
-.accent-ice { color: var(--ice); }
-.accent-ember { color: var(--ember); }
-.accent-psi { color: var(--psi); }
-.accent-steel { color: var(--steel); }
-
-/* ============================================================
-   STILL PLATE 定妆图
-   ============================================================ */
-
-.still-plate { margin: 2rem 0; }
-
-.plate-label {
-  position: absolute;
-  top: 1rem;
-  left: 1.5rem;
-  background: rgba(250, 246, 238, 0.9);
-  padding: 0.3rem 0.6rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  backdrop-filter: blur(2px);
-}
-
-.plate-caption {
-  position: absolute;
-  bottom: 1rem;
-  right: 1.5rem;
-  background: rgba(250, 246, 238, 0.8);
-  padding: 0.3rem 0.6rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  backdrop-filter: blur(2px);
-}
-
-.still-plate figcaption {
-  margin-top: 0.75rem;
-  padding-left: 1rem;
-  border-left: 1px solid var(--border);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  line-height: 1.8;
+  font-size: 1.5rem;
+  font-weight: 400;
   letter-spacing: 0.08em;
-  color: var(--muted-fg);
-}
-
-/* ============================================================
-   BIO GRID 双栏布局
-   ============================================================ */
-
-.char-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: 3.5rem;
-}
-
-@media (max-width: 900px) {
-  .char-grid { grid-template-columns: 1fr; }
-}
-
-.bio-block { margin-bottom: 2.5rem; }
-
-.section-label {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-}
-
-.section-label span:first-child {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  color: var(--muted-fg);
-}
-
-.section-label .line {
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-.section-label h3 {
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  letter-spacing: 0.24em;
-  color: rgba(43, 37, 31, 0.85);
-  margin: 0;
-  border: none;
-}
-
-.sub-note {
-  margin-top: 0.75rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: var(--muted-fg);
-}
-
-/* 档案列表 */
-.fact-list { margin: 1rem 0 0; }
-
-.fact-list > div {
-  border-top: 1px solid var(--border);
-  padding: 0.75rem 0;
-}
-
-.fact-list dt {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  color: var(--muted-fg);
-}
-
-.fact-list dd {
-  margin: 0.5rem 0 0;
-  font-size: 0.875rem;
-  line-height: 1.7;
-  color: rgba(43, 37, 31, 0.85);
-}
-
-/* 编号列表 */
-.numbered-list {
-  margin: 1rem 0 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.numbered-list li {
-  display: flex;
-  gap: 0.9rem;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: rgba(43, 37, 31, 0.8);
-}
-
-.numbered-list li span {
-  flex-shrink: 0;
-  margin-top: 2px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-}
-
-/* 性格内核 */
-.core-quote {
-  margin-top: 1.25rem;
-  padding-left: 1.25rem;
-  border-left: 2px solid;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.95;
-  color: rgba(43, 37, 31, 0.9);
-}
-
-.border-amber { border-color: rgba(157, 99, 17, 0.6); }
-.border-ice { border-color: rgba(49, 107, 135, 0.6); }
-.border-ember { border-color: rgba(172, 73, 35, 0.6); }
-.border-psi { border-color: rgba(164, 110, 0, 0.6); }
-.border-steel { border-color: rgba(82, 95, 109, 0.6); }
-
-/* 口头禅 */
-.catchphrase {
-  margin: 1.25rem 0 0;
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  line-height: 1.3;
-}
-
-/* 虚线列表 */
-.dash-list {
-  margin: 1.5rem 0 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.dash-list li {
-  display: flex;
-  gap: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: rgba(43, 37, 31, 0.75);
-}
-
-.dash-list li::before {
-  content: "";
-  flex-shrink: 0;
-  width: 1rem;
-  height: 1px;
-  background: var(--border);
-  margin-top: 0.6rem;
-}
-
-/* 核心秘密 */
-.secret-box {
-  margin-top: 1.25rem;
-  border: 1px solid rgba(172, 73, 35, 0.35);
-  background: rgba(172, 73, 35, 0.06);
-  padding: 1.25rem;
-}
-
-.secret-label {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.24em;
-  color: rgba(172, 73, 35, 0.85);
-  margin: 0;
-}
-
-.secret-box p:last-child {
-  margin: 0.75rem 0 0;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.95;
-  color: rgba(43, 37, 31, 0.9);
-}
-
-/* 人物弧线 */
-.arc-list {
-  margin: 1.25rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.arc-list li {
-  display: flex;
-  gap: 1rem;
-  padding-bottom: 1.5rem;
-  position: relative;
-}
-
-.arc-list li:last-child { padding-bottom: 0; }
-
-.arc-dot {
-  flex-shrink: 0;
-  width: 12px;
-  height: 12px;
-  margin-top: 6px;
-  transform: rotate(45deg);
-  border: 1px solid currentColor;
-  background: transparent;
-}
-
-.arc-list li:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 22px;
-  width: 1px;
-  height: calc(100% - 22px);
-  background: var(--border);
-}
-
-.arc-list div strong {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: rgba(43, 37, 31, 0.9);
-}
-
-.arc-list div span {
-  display: block;
-  margin-top: 0.25rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: var(--muted-fg);
-}
-
-/* 表演基调 */
-.direction-box {
-  margin-top: 1.25rem;
-  background: rgba(238, 231, 217, 0.7);
-  padding: 1.25rem;
-}
-
-.direction-label {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.24em;
-  color: var(--muted-fg);
-  margin: 0;
-}
-
-.direction-box p:last-child {
-  margin: 0.75rem 0 0;
-  font-size: 0.875rem;
-  line-height: 1.9;
-  color: rgba(43, 37, 31, 0.8);
-}
-
-/* ============================================================
-   RELATIONS 关系网
-   ============================================================ */
-
-.section-relations {
-  padding: 4rem 3rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.relations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.relation-card {
-  border: 1px solid var(--border);
-  padding: 1.25rem;
-  background: var(--card);
-}
-
-.relation-card strong {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-}
-
-.relation-card p {
-  margin: 0.5rem 0 0;
-  font-size: 0.875rem;
-  color: var(--muted-fg);
-  line-height: 1.6;
-}
-
-/* ============================================================
-   COLOPHON 版权页
-   ============================================================ */
-
-.colophon {
-  padding: 6rem 3rem;
-  text-align: center;
-  font-family: var(--font-serif);
-}
-
-.colophon p {
-  font-size: 1.1rem;
-  line-height: 2;
-  color: rgba(43, 37, 31, 0.7);
-  margin: 0;
-}
-
-.colophon .welcome-back {
-  margin-top: 2rem;
-  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
   color: var(--primary);
 }
 
+.bd-article h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.bd-article blockquote {
+  border-left: 3px solid var(--primary);
+  background: var(--card);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(43, 37, 31, 0.85);
+}
+
+.bd-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.bd-article table th {
+  background: var(--secondary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+.bd-article table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.bd-article table tr:hover {
+  background: rgba(157, 99, 17, 0.04);
+}
+
+.bd-article img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(69, 56, 41, 0.15);
+  margin: 1rem 0;
+}
+
+/* admonition 美化 */
+.bd-article .admonition {
+  border-left: 3px solid var(--destructive);
+  background: rgba(172, 73, 35, 0.05);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.bd-article .admonition .admonition-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--destructive);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.bd-article .admonition.note {
+  border-left-color: var(--ice);
+  background: rgba(49, 107, 135, 0.05);
+}
+
+.bd-article .admonition.note .admonition-title {
+  color: var(--ice);
+}
+
 /* ============================================================
-   图片默认样式覆盖
+   侧边栏导航美化
    ============================================================ */
 
-.bd-content img {
-  padding: 0;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  background: transparent;
+.bd-sidebar-primary {
+  background: var(--card);
+  border-right: 1px solid var(--border);
+}
+
+.bd-sidebar-primary .nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--fg);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  margin: 0.125rem 0;
+}
+
+.bd-sidebar-primary .nav-link:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.bd-sidebar-primary .nav-link.active {
+  background: rgba(157, 99, 17, 0.1);
+  color: var(--primary);
+  border-left: 2px solid var(--primary);
+}
+
+/* ============================================================
+   顶部导航栏美化
+   ============================================================ */
+
+.bd-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(69, 56, 41, 0.08);
+}
+
+.bd-header .navbar-brand {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: var(--primary);
 }
 
 /* ============================================================
@@ -743,15 +216,10 @@ body {
    ============================================================ */
 
 @media (max-width: 768px) {
-  .hero-topbar { padding: 1rem 1.5rem; }
-  .hero-main { padding: 2rem 1.5rem; }
-  .hero-meta { grid-template-columns: repeat(2, 1fr); }
-  .matte-frame { margin: 1rem 1.5rem; }
-  .keyart-caption { padding: 1rem 1.5rem; }
-  .section-character { padding: 2rem 1.5rem; }
-  .char-header { flex-direction: column; align-items: flex-start; }
-  .char-role { text-align: left; }
-  .char-grid { gap: 2rem; }
-  .section-relations { padding: 2rem 1.5rem; }
-  .colophon { padding: 4rem 1.5rem; }
+  .bd-article {
+    padding: 1rem;
+  }
+  .bd-article h1 {
+    font-size: 2rem;
+  }
 }
