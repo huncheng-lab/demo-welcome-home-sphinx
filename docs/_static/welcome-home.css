@@ -1,0 +1,256 @@
+/* 《欢迎回家》档案站 —— 与 React 原站 src/styles.css 的 oklch token 逐项对齐。
+   下列 hex 由 Chromium 原生解析引擎换算（oklch -> sRGB），非目测近似：
+
+   --background  oklch(0.955 0.016 85) -> #f5f0e4  暖纸米白 · 剧本手稿页
+   --foreground  oklch(0.27 0.014 70)  -> #2b251f  深墨 · 印刷正文
+   --card        oklch(0.975 0.012 85) -> #faf6ee  卡纸白，比页面底亮一档
+   --popover     oklch(0.978 0.012 85) -> #fbf7ef
+   --primary     oklch(0.55 0.115 68)  -> #9d6311  深琥珀金（加深后的强调色）
+   --secondary   oklch(0.93 0.02 84)   -> #eee7d9
+   --muted       oklch(0.925 0.018 84) -> #ece5d9
+   --muted-fg    oklch(0.5 0.018 72)   -> #6a6258  次要文字灰度
+   --accent      oklch(0.905 0.028 82) -> #e9decb  淡金衬底（hover/选中态背景）
+   --border      oklch(0.845 0.022 82) -> #d3cbbc  纸边线
+   角色强调色：amber #a56202 / ice #316b87 / ember #ac4923 / psi #a46e00 / steel #525f6d
+   装裱投影 oklch(0.35 0.03 70 / .35) -> rgba(69,56,41,.35)
+*/
+
+html {
+  /* 字族与原站一致：正文 sans（PingFang/Noto Sans SC），标题 serif（Songti/Noto Serif SC） */
+  --pst-font-family-base: "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC",
+    "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --pst-font-family-heading: "Songti SC", "Noto Serif SC",
+    "Source Han Serif SC", "STSong", Georgia, "Times New Roman", serif;
+  --pst-font-family-monospace: "SF Mono", "JetBrains Mono", ui-monospace, Menlo,
+    Consolas, monospace;
+
+  /* 页面底 / 卡片 / 侧栏：background → card → popover 三档纸色 */
+  --pst-color-background: #f5f0e4;
+  --pst-color-on-background: #faf6ee;
+  --pst-color-surface: #faf6ee;
+  --pst-color-on-surface: #2b251f;
+
+  /* 正文墨色 + 次要文字灰度 */
+  --pst-color-text-base: #2b251f;
+  --pst-color-text-muted: #6a6258;
+
+  /* 琥珀金强调色（原站加深值） */
+  --pst-color-primary: #9d6311;
+  --pst-color-link: #9d6311;
+  --pst-color-link-hover: #9d6311;
+
+  /* Bootstrap 链接变量（主题 a{color} 实际经 --bs-link-color 解析，不钉死会露出默认靛紫） */
+  --bs-link-color: #9d6311;
+  --bs-link-color-rgb: 157, 99, 17;
+  --bs-link-hover-color: #9d6311;
+  --bs-link-hover-color-rgb: 157, 99, 17;
+
+  /* 纸边线 */
+  --pst-color-border: #d3cbbc;
+
+  /* 主题实际消费的字体变量名（v0.16：--pst-font-family-base-system/-serif） */
+  --pst-font-family-base: var(--pst-font-family-base-system);
+  --pst-font-family-heading: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong", Georgia, serif;
+  --pst-font-family-monospace-system: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  /* 圆角对齐原站 --radius: 0.25rem */
+  --pst-card-border-radius: 0.25rem;
+  --pst-header-height: 3.5rem;
+}
+
+/* pydata-sphinx-theme 在 html[data-theme] 上重新声明全套 --pst-* 变量，
+   同特异性且后加载会覆盖上面的 html{}；用属性选择器提权逐项钉死。 */
+html:not([data-theme]) {
+  --pst-color-background: #f5f0e4;
+  --pst-color-on-background: #faf6ee;
+  --pst-color-surface: #faf6ee;
+  --pst-color-on-surface: #2b251f;
+  --pst-color-text-base: #2b251f;
+  --pst-color-text-muted: #6a6258;
+  --pst-color-primary: #9d6311;
+  --pst-color-link: #9d6311;
+  --pst-color-border: #d3cbbc;
+  --bs-link-color: #9d6311;
+  --bs-link-color-rgb: 157, 99, 17;
+  --bs-link-hover-color: #9d6311;
+  --bs-link-hover-color-rgb: 157, 99, 17;
+}
+html[data-theme="light"] {
+  --pst-color-background: #f5f0e4;
+  --pst-color-on-background: #faf6ee;
+  --pst-color-surface: #faf6ee;
+  --pst-color-on-surface: #2b251f;
+  --pst-color-text-base: #2b251f;
+  --pst-color-text-muted: #6a6258;
+  --pst-color-primary: #9d6311;
+  --pst-color-link: #9d6311;
+  --pst-color-border: #d3cbbc;
+  --bs-link-color: #9d6311;
+  --bs-link-color-rgb: 157, 99, 17;
+  --bs-link-hover-color: #9d6311;
+  --bs-link-hover-color-rgb: 157, 99, 17;
+}
+/* 主题自带深色模式与本站纯浅色影调冲突，强制回落纸色 */
+html[data-theme="dark"] {
+  --pst-color-background: #f5f0e4 !important;
+  --pst-color-on-background: #faf6ee !important;
+  --pst-color-surface: #faf6ee !important;
+  --pst-color-on-surface: #2b251f !important;
+  --pst-color-text-base: #2b251f !important;
+  --pst-color-text-muted: #6a6258 !important;
+  --pst-color-primary: #9d6311 !important;
+  --pst-color-link: #9d6311 !important;
+  --pst-color-border: #d3cbbc !important;
+  --bs-link-color: #9d6311 !important;
+  --bs-link-color-rgb: 157, 99, 17 !important;
+  --bs-link-hover-color: #9d6311 !important;
+  --bs-link-hover-color-rgb: 157, 99, 17 !important;
+}
+
+/* 标题锚点链接（headerlink）：悬停才显形，用琥珀金而非主题默认 secondary 紫 */
+a.headerlink { color: transparent !important; }
+a.headerlink:hover { color: #9d6311 !important; }
+
+body { background-color: var(--pst-color-background); color: var(--pst-color-text-base); }
+
+::selection { background-color: #9d6311; color: #fbf8f1; }
+
+/* 顶栏：卡纸白 + 纸边线（对应原站吸顶导航的 bg-card/border 语言） */
+.bd-navbar {
+  background-color: #faf6ee !important;
+  border-bottom: 1px solid #d3cbbc;
+}
+
+/* 顶栏当前分区（如「人物档案」）：原站吸顶导航用琥珀金下划线。
+   主题的下划线画在 a.nav-link::before 的 border-bottom(3px)，不是 ::after，
+   且 --pst-color-secondary 默认靛紫会透出，需一并钉成琥珀金。 */
+.bd-header .navbar-nav .nav-link.active,
+.bd-header .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #9d6311 !important;
+}
+.bd-header .navbar-nav .nav-link.active::before,
+.navbar-nav .nav-link.active::before {
+  border-bottom-color: #9d6311 !important;
+}
+:root,
+html[data-theme="light"],
+html[data-theme="dark"] {
+  --pst-color-secondary: #9d6311 !important;
+  --pst-color-secondary-highlight: #a46e00 !important;
+}
+
+/* 左侧导航当前项：淡金衬底 + 琥珀金左边线与文字（原站 accent/primary 组合）
+   主题把 current/active 打在 li.nav-item 上、链接本身只有 a.nav-link 类，
+   故并列覆盖 li.current > a / a.current / .active 三种落点。 */
+.bd-sidebar-primary li.current > a,
+.bd-sidebar-primary li.active > a,
+.bd-sidebar-primary a.current,
+.bd-sidebar-primary a.active,
+.bd-sidebar-primary .active {
+  border-left: 4px solid #9d6311 !important;
+  color: #9d6311 !important;
+  font-weight: 600;
+  background-color: #e9decb;
+}
+.bd-sidebar-primary .nav-link:hover,
+.bd-sidebar-primary li.current > a:hover {
+  background-color: #e9decb;
+}
+
+/* 右侧目录当前条目同语言 */
+.bd-toc .nav-link.active,
+.bd-toc li.current > a { color: #9d6311 !important; }
+
+/* 标题层级：serif + 字距，H1 用深墨、H2/H3 承 primary 细金线 */
+h1, h2, h3, h4 {
+  color: #2b251f;
+  letter-spacing: 0.02em;
+}
+h1 { font-weight: 700; }
+h2 {
+  font-weight: 600;
+  border-bottom: 1px solid #d3cbbc;
+  padding-bottom: 0.35em;
+}
+
+/* 剧照卡纸装裱：与 StillPlate/.matte-frame 一致的观感
+   （卡纸留白 + 纸边线外框 + 极轻暖墨投影 + 内缘细墨线） */
+img {
+  background-color: #faf6ee;
+  padding: clamp(10px, 2vw, 22px);
+  border: 1px solid #d3cbbc;
+  outline: 1px solid rgba(43, 37, 31, 0.22); /* matte-frame-inner 细墨线 */
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 10px 30px -18px rgba(69, 56, 41, 0.35);
+}
+
+/* 表格：表头用 secondary 纸档色 + 琥珀金下边线；斑马纹用 muted */
+table { font-size: 0.92rem; }
+thead th {
+  background-color: #eee7d9 !important;
+  color: #38322a !important;
+  border-bottom: 2px solid #9d6311 !important;
+}
+tbody tr:nth-child(even) { background-color: #ece5d9; }
+
+/* warning admonition = 核心秘密区块：烫金 psi 左边线 + accent 淡金衬底 */
+div.admonition.warning {
+  border-left: 4px solid #a46e00;
+  background-color: #e9decb;
+  color: #332d25;
+}
+div.admonition.warning .admonition-title {
+  background-color: rgba(164, 110, 0, 0.12);
+  color: #332d25;
+}
+
+/* note admonition 用次要纸档色，不与 warning 抢语义 */
+div.admonition.note {
+  border-left: 4px solid #d3cbbc;
+  background-color: #faf6ee;
+}
+
+pre {
+  border: 1px solid #d3cbbc;
+  background-color: #faf6ee;
+}
+
+/* 移动端（≤768px，含 iPhone 390pt）：
+   - 左右侧栏由主题收进抽屉；两抽屉同时展开会互相叠压，故让后开的盖住先开的并各自带遮罩
+   - 剧照卡纸装裱在窄屏按比例收窄留白，避免图片被压得过小
+   - 表格保持横向滚动，不撑破版面 */
+@media (max-width: 768px) {
+  /* 装裱：padding 从 clamp 下限再收到 6px，投影减淡一档，细墨线保留 */
+  img {
+    padding: 6px;
+    max-width: 100%;
+    height: auto;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      0 6px 18px -14px rgba(69, 56, 41, 0.35);
+  }
+
+  /* 表格：外层容器已 overflow-x:auto，这里兜底防长单元格撑宽 */
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  /* 窄屏下让单元格自然换行，避免 nowrap 把行高拉出大片空白；
+     仅当整表确实超宽时才由上面的 overflow-x 横向滚动 */
+  table td, table th { white-space: normal; word-break: break-word; }
+
+  /* 两个抽屉互斥：主题用 JS 切换 .in-responsive--visible（无 checkbox），
+     左章节抽屉展开时隐藏右目录抽屉，避免两者同层叠压导致正文不可读 */
+  .bd-sidebar-primary.in-responsive--visible ~ * .bd-sidebar-secondary,
+  body:has(.bd-sidebar-primary.in-responsive--visible) .bd-sidebar-secondary {
+    visibility: hidden;
+  }
+
+  /* 面包屑在窄屏下不换行溢出，允许横向滚动 */
+  .bd-header__breadcrumb { overflow-x: auto; white-space: nowrap; }
+
+  /* warning admonition 标题与正文在窄屏收紧内边距，保证换行自然 */
+  div.admonition.warning { padding: 0.75rem 0.9rem; }
+  div.admonition.warning .admonition-title { margin: -0.75rem -0.9rem 0.5rem; padding: 0.4rem 0.9rem; }
+}

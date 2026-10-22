@@ -1,0 +1,45 @@
+[project]
+name = "demo-welcome-home-sphinx"
+version = "1.0.0"
+description = "《欢迎回家》档案站 —— Python + Sphinx + MyST 静态文档站"
+readme = "README.md"
+requires-python = ">=3.14"
+authors = [
+    {name = "《欢迎回家》剧组档案"}
+]
+keywords = [
+    "sphinx",
+    "myst-markdown",
+    "documentation",
+    "github-pages"
+]
+classifiers = [
+    "Private :: Do Not Upload",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx"
+]
+
+# 本目录是纯文档站，不作为可安装发行版发布：
+# 依赖统一由 dependency-groups 提供，使用 `pip install --group docs` 安装。
+[dependency-groups]
+docs = [
+    "sphinx>=8.1",
+    "myst-parser>=4.0",
+    "pydata-sphinx-theme>=0.16",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+exclude = [
+    "build",
+    ".venv",
+    "__pycache__",
+]
+
+[tool.ruff.lint]
+select = [
+    "E", "W", "F", "I", "UP",
+]
+ignore = ["E501"]
